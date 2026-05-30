@@ -1,0 +1,12 @@
+function LunchBreak(seriesname, episodeduration, breakduration){
+    const lunchtime = breakduration / 8;
+    const timerest = breakduration / 4;
+
+    const timeforleft = breakduration - (lunchtime + timerest);
+
+    if (timeforleft >= episodeduration) {
+        console.log(`You have enough time to watch ${seriesname} and left with ${Math.ceil(timeforleft - episodeduration)} minutes free time.`);
+    } else {
+        console.log(`You don't have enough time to watch ${seriesname}, you need ${Math.ceil(episodeduration - timeforleft)} more minutes.`);
+    }
+}
