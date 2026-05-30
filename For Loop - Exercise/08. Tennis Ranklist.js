@@ -9,7 +9,7 @@ function tennisranklist(input){
 
         if (result === "W") points += 2000, winscount++;
         else if (result === "F") points += 1200;
-        else if (result === "SF") points += 700;
+        else if (result === "SF") points += 720;
     }
 
     console.log(`Final points: ${points + pointsFromStart}`);
