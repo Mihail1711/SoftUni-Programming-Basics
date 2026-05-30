@@ -1,0 +1,19 @@
+function TimeMinutes(hours, minutes){
+    let timeminutes = minutes + 15;
+    let timehours = hours;
+
+    if (timeminutes >= 60){
+        timehours += 1;
+        timeminutes -= 60;
+    }
+
+    if (timehours == 24){
+        timehours = 0;
+    }
+
+    if (timeminutes < 10){
+        console.log(`${timehours}:0${timeminutes}`);
+    } else {
+        console.log(`${timehours}:${timeminutes}`);
+    }
+}
