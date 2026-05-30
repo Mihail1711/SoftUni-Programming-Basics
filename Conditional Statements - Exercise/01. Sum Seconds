@@ -1,0 +1,12 @@
+function sumSeconds(sec1, sec2, sec3){
+    const totalsec = sec1 + sec2 + sec3;
+
+    const minutes = Math.floor(totalsec / 60);
+    const seconds = totalsec % 60;
+
+    if (seconds < 10) {
+        console.log(`${minutes}:0${seconds}`);
+    } else {
+        console.log(`${minutes}:${seconds}`);
+    }
+}
