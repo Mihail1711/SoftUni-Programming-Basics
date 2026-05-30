@@ -1,0 +1,15 @@
+function WorldswimmingRecord(record, distance, timepermeter){
+    let puretime = distance * timepermeter;
+    let delays = Math.floor(distance / 15);
+    let totaldelaytime = delays * 12.5;
+
+    let totaltime = puretime + totaldelaytime;
+
+    if (totaltime < record){
+        console.log(`Yes, he succeeded! The new world record is ${totaltime.toFixed(2)} seconds.`);
+    } else {
+        let diff = totaltime - record;
+        console.log(`No, he failed! He was ${diff.toFixed(2)} seconds slower.`);
+    }
+    
+}
