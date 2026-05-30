@@ -1,0 +1,24 @@
+function godzillavsKong(bugetformovie, actorcount, clothingpriceperactor){
+    const decor = bugetformovie * 0.1;
+    
+    // Промяна: Умножаваме броя на актьорите по цената на облеклото
+    let sumforclothing = actorcount * clothingpriceperactor;
+
+    if (actorcount > 150) {
+        sumforclothing *= 0.9; // 10% отстъпка
+    }
+    
+    const totalsum = decor + sumforclothing;
+
+    if (totalsum > bugetformovie){
+        console.log("Not enough money!");
+        console.log(
+            `Wingard needs ${(totalsum - bugetformovie).toFixed(2)} leva more.`, 
+        );
+    } else {
+        console.log("Action!");
+        console.log(
+            `Wingard starts filming with ${(bugetformovie - totalsum).toFixed(2)} leva left.`,
+        );
+    }
+}
