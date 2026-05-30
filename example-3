@@ -1,0 +1,7 @@
+function yard(area, pricesquaremeter, discont) {
+    const pricesquaremeter = 7.61;
+    const discount = 18;
+
+
+    console.log(totalSum + " lv.");
+}
