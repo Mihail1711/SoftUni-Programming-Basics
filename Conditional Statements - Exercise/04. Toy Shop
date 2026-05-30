@@ -1,0 +1,16 @@
+function toyShop(priceVacantion, puzzlescount, dollscount, bearscount, minionscount, truckscount){
+    let sumToy = puzzlescount * 2.6 + dollscount * 3 + bearscount * 4.1 + minionscount * 8.2 + truckscount * 2;
+    const countToy = puzzlescount + dollscount + bearscount + minionscount + truckscount;
+    if (countToy >= 50){
+        sumToy *= 0.75;
+    }
+
+    const rent = sumToy * 0.1;
+    const profit = sumToy - rent;
+
+    if (profit >= priceVacantion){
+        console.log(`Yes! ${(profit - priceVacantion).toFixed(2)} lv left.`);
+    } else {
+        console.log(`Not enough money! ${(priceVacantion - profit).toFixed(2)} lv needed.`);
+    }
+}
