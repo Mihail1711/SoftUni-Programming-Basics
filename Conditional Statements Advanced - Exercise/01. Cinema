@@ -1,0 +1,16 @@
+function Cinema(typeTicket, rows, cols){
+    let priceperTicket = 0;
+
+    if (typeTicket === 'Premiere'){
+        priceperTicket = 12;
+    } else if (typeTicket === 'Normal'){
+        priceperTicket = 7.50;
+    } else if (typeTicket === 'Discount'){
+        priceperTicket = 5;
+    }
+
+    const income = priceperTicket * (rows * cols);
+    console.log(`${income.toFixed(2)} leva`)
+
+
+}
