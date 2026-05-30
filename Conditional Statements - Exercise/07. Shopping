@@ -1,0 +1,20 @@
+function Shopping(budget, videoCardsCount, processorsCount, ramCount) {
+    const sumforvideocard = videoCardsCount * 250;
+    const priceprocessors = sumforvideocard * 0.35;
+    const sumprocessor = processorsCount * priceprocessors;
+    const priceram = sumforvideocard * 0.1;
+    const sumram = ramCount * priceram;
+
+    let totalprice = sumforvideocard + sumprocessor + sumram;
+
+    if (videoCardsCount > processorsCount) {
+        totalprice *= 0.85;
+    }
+
+    if (budget >= totalprice) {
+        console.log(`You have ${(budget - totalprice).toFixed(2)} leva left!`);
+    } else {
+        console.log(`Not enough money! You need ${(totalprice - budget).toFixed(2)} leva more!`);
+    }
+
+}
